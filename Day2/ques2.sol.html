@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ques2-sol</title>
+
+
+</head>
+
+<body>
+	<h1>Remaining methods of string and array</h1>
+	<script>
+		//pop,push,shift,unshift,delete,splicing on arrays
+		var fruits = ["Banana", "Orange", "Apple", "Mango"];
+		fruits.pop();
+		console.log(fruits);
+
+		var fruits = ["Banana", "Orange", "Apple", "Mango"];
+		fruits.push("Kiwi");
+		console.log(fruits);
+
+		var fruits = ["Banana", "Orange", "Apple", "Mango"];
+		fruits.shift();
+		console.log(fruits);
+
+		var fruits = ["Banana", "Orange", "Apple", "Mango"];
+		fruits.unshift("Lemon");
+		console.log(fruits);
+
+		var fruits = ["Banana", "Orange", "Apple", "Mango"];
+		delete fruits[0];
+		console.log(fruits);
+
+		var fruits = ["Banana", "Orange", "Apple", "Mango"];
+		fruits.splice(2, 0, "Lemon", "Kiwi");
+		console.log(fruits);
+
+		var fruits = ["Banana", "Orange", "Apple", "Mango"];
+		fruits.splice(0, 1);
+		console.log(fruits);
+
+
+		//String MEthods
+		//indexof,length,lastindexof,search,slice,substring,substr,replace
+		var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		var sln = txt.length;
+		console.log(sln)
+
+		var str = "Hello!!!!Are you there???";
+		var pos = str.indexOf("Are");
+		console.log(pos)
+
+
+
+	</script>
+</body>
+
+</html>
