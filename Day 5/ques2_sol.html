@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ques2_sol</title>
+</head>
+
+<body>
+	<h1>OOPs -- class</h1>
+	<script>
+		class User {
+			constructor(name, age, email) {
+				this.name = name;
+				this.age = age;
+				this.email = email;
+				this.lucoins = 0;
+
+				this.course = [];
+			}
+			login() {
+				console.log(`${this.name} has logged in.`);
+				return this;
+			}
+			logout() {
+				console.log(`${this.name} has logged out.`);
+				return this;
+			}
+		}
+		class Moderator extends User {
+
+
+			addCoins(User) {
+				this.lucoins++;
+				console.log(`${this.name} has ${this.lucoins} coins`);
+				return this;
+			}
+			removeCoins(User) {
+				this.lucoins--;
+				this.rmCoins = this.lucoins;
+				console.log(`${this.name} has removed ${this.rmCoins}rd coin`);
+				return this;
+			}
+		}
+		class Admin extends Moderator {
+			addCourse(user, course) {
+				user.course.push(course);
+				console.log(user);
+			}
+			deleteCourse(user, course) {
+				users = users.filter(u => {
+					return u.course != user.course;
+				})
+			}
+		}
+		let User1 = new User('raj', 20, "raj@gmail.com");
+		let mod = new Moderator('raj', 20, "n@gmail.com");
+		let admin = new Admin("raj", 25, 'rio@gmail.com');
+		let users = [User1, mod, admin];
+
+
+		User1.login();
+		mod.addCoins().addCoins().addCoins().addCoins();
+		mod.removeCoins().removeCoins().removeCoins();
+		admin.addCourse(User1, "js");
+		admin.addCourse(User1, 'python');
+		admin.deleteCourse(User1, "python")
+		User1.logout()
+
+
+
+	</script>
+</body>
+
+
+</html>
